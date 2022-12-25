@@ -1,6 +1,14 @@
 {% extends 'base.html' %} {% block title %} Search {% endblock title %} {% block
 body %}
-<h3 class="text-center"><span>Search Your Details</span></h3>
+<h4
+  class="text-center pt-2 pb-2"
+  style="
+    color: white;
+    background-image: linear-gradient(45deg, #db0b5f, #6f00ed);
+  "
+>
+  <span>Search Your Details</span>
+</h4>
 
 {% with messages=get_flashed_messages(with_categories=true) %} {% if messages %}
 {% for category, message in messages %}
@@ -24,9 +32,15 @@ body %}
             placeholder="Use Small Letter"
           />
         </div>
-        <br />
 
-        <button type="submit" class="btn btn-danger btn-sm btn-block">
+        <button
+          type="submit"
+          class="btn btn-sm btn-block mt-3"
+          style="
+            color: white;
+            background-image: linear-gradient(45deg, #db0b5f, #6f00ed);
+          "
+        >
           Search
         </button>
       </form>
@@ -53,7 +67,7 @@ body %}
       <hr />
       <li>Marks : {{marks.marks}}</li>
       <br />
-      {% else %} No such results {% endif %}
+      {% else %}{% endif %}
     </div>
   </div>
 

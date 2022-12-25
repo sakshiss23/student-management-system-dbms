@@ -83,6 +83,12 @@ def index():
     return render_template('index.html')
 
 
+@app.route('/about')
+def about():
+    query = db.engine.execute(f"SELECT * FROM `student`")
+    return render_template('about.html', query=query)
+
+
 @app.route('/studentdetails')
 def studentdetails():
     query = db.engine.execute(f"SELECT * FROM `student`")
