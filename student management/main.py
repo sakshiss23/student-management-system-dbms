@@ -175,8 +175,8 @@ def edit(id):
         num = request.form.get('num')
         address = request.form.get('address')
         query = db.engine.execute(
-            f"UPDATE `student` SET `rollno`='{rollno}',`sname`='{sname}',`sem`='{sem}',`gender`='{gender}',`branch`='{branch}',`email`='{email}',`number`='{num}',`address`='{address}' ")
-        flash("Slot is Updates", "success")
+            f"UPDATE `student` SET `rollno`='{rollno}',`sname`='{sname}',`sem`='{sem}',`gender`='{gender}',`branch`='{branch}',`email`='{email}',`number`='{num}',`address`='{address}' WHERE `student`.`id`={id} ")
+        flash("Slot is Updated", "success")
         return redirect('/studentdetails')
 
     return render_template('edit.html', posts=posts, dept=dept)
