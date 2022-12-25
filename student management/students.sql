@@ -33,6 +33,12 @@ CREATE TABLE `attendence` (
   `attendance` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+CREATE TABLE `marks` (
+  `aid` int(11) NOT NULL,
+  `rollno` varchar(20) NOT NULL,
+  `marks` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Dumping data for table `attendence`
 --
@@ -40,6 +46,8 @@ CREATE TABLE `attendence` (
 INSERT INTO `attendence` (`aid`, `rollno`, `attendance`) VALUES
 (6, '1ve17cs012', 98);
 
+INSERT INTO `marks` (`aid`, `rollno`, `marks`) VALUES
+(6, '1ve17cs012', 85);
 -- --------------------------------------------------------
 
 --
@@ -168,6 +176,9 @@ INSERT INTO `user` (`id`, `username`, `email`, `password`) VALUES
 ALTER TABLE `attendence`
   ADD PRIMARY KEY (`aid`);
 
+ALTER TABLE `marks`
+  ADD PRIMARY KEY (`aid`);
+
 --
 -- Indexes for table `department`
 --
@@ -208,6 +219,8 @@ ALTER TABLE `user`
 ALTER TABLE `attendence`
   MODIFY `aid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
+ALTER TABLE `marks`
+  MODIFY `aid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `department`
 --

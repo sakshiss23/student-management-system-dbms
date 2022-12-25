@@ -23,6 +23,7 @@
 
   <!-- Template Main CSS File -->
   <link href="static/assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/nameAnimation.css">
 
  
 </head>
@@ -34,8 +35,6 @@
     <div class="container">
 
       <div id="logo" class="pull-left">
-
-        <a href="/" class="scrollto">S.M.S</a>
       </div>
 
       <nav id="nav-menu-container">
@@ -45,15 +44,14 @@
          
  <li><a href="/addstudent">Students</a></li>
  <li><a href="/addattendance">Attendance</a></li>
+ <li><a href="/addmarks">Marks</a></li>
  <li><a href="/department">Department</a></li>
  <li><a href="/triggers">Records</a></li>
  <li><a href="/studentdetails">Student Details</a></li>
  <li><a href="/search">Search</a></li>
-       
-    
-          <li><a href="/about">About</a></li>
+ <li><a href="/about">About</a></li>
           
-   
+
 
     {% if current_user.is_authenticated  %}
           <li class="buy-tickets"><a href="">Welcome {{current_user.username}}</a></li>
@@ -70,10 +68,13 @@
   <!-- ======= Intro Section ======= -->
  <section id="intro">
     <div class="intro-container" data-aos="zoom-in" data-aos-delay="100">
-      <h1 class="mb-4 pb-0">STUDENT MANAGEMENT SYSTEM </span> </h1>
-      <p class="mb-4 pb-0">DBMS Mini Project Using Flask & MYSQL</p>
-    
-      <a href="" class="about-btn scrollto">View More</a>
+      <section class="name">
+        <div class="content">
+          <h2>STUDENT</h2>
+          <h2>STUDENT</h2>
+        </div>
+      </section>
+      <h1 class="mb-4 pb-0">MANAGEMENT SYSTEM </h1>
     </div>
   </section><!-- End Intro Section -->
   <main id="main">
